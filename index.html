@@ -30,5 +30,21 @@
     <header>
       <h1>Mis Cuentos PISADOS</h1>
     </header>
+    <script>
+      console.log("Hola, este es un mensaje de la consola.");
+      // Creamos un loading para simular la carga de los cuentos
+      document.addEventListener("DOMContentLoaded", function () {
+        const loading = document.createElement("div");
+        loading.textContent = "Cargando cuentos...";
+        document.body.appendChild(loading);
+
+        setTimeout(function () {
+          loading.remove();
+          const cuentosList = document.querySelector("ul");
+          cuentosList.style.display = "block";
+        }, 2000);
+      });
+    </script>
   </body>
+
 </html>
